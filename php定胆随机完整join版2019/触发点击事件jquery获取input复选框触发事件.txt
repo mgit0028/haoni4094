@@ -1,0 +1,77 @@
+05.18 09:47
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+
+
+
+//引用jquery
+
+//引用jquery
+
+
+</head>
+<body>
+
+​
+<div data-role="page">
+  <div data-role="header">
+  <h1>大乐透反复选框，新版定胆随机</h1>
+  </div>
+​
+  <div data-role="main" class="ui-content">
+    <form method="post" action="#"
+
+<label>
+
+    <input type="checkbox" name="city"     id="c"     value="『你已经，很努力了』，剩下的，要看天意">点我触发事件哦
+
+ </label>
+
+ <label>
+//h1标签必须放在label标签内
+<h1>您选的定胆码是____<span id="spanId">_____</span></h1>
+
+   </label>
+
+<?php
+
+//php代码
+
+？>
+
+
+</form>
+
+
+<script>
+        $(function () {
+            $("input[id=c").click(function () {
+                var arr = [];
+                $("input[id=c").each(function () {
+                    if(this.checked){
+                        arr.push(this.value);
+                    }else{
+                        var index = arr.indexOf(this.value);
+                        if(index != -1){
+                            arr[index] = "";
+                        }
+                    }
+                });
+                $("#spanId").text(arr.join(","));
+            })
+        });
+</script>
+
+  </div>
+</div>
+​
+</body>
+</html>
+
+
+

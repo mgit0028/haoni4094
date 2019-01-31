@@ -1,0 +1,71 @@
+indexjqcode2019000000000.htm
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="jquery-1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	$("button").click(function(){
+		$.post("/index2.php",{
+			name:"菜鸟教程",
+			url:"http://localhost:8080"
+		},
+		function(data,status){
+			alert("数据: \n" + data + "\n状态: " + status);
+		});
+	});
+});
+</script>
+</head>
+<body>
+
+<button>发送一个 HTTP POST 请求页面并获取返回内容</button>
+
+</body>
+</html>
+
+
+
+
+
+和index2.php
+
+
+<?php
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$url = isset($_POST['url']) ? htmlspecialchars($_POST['url']) : '';
+echo '网站名: ' . $name;
+echo "\n";
+echo 'URL 地址: ' .$url;
+?>
+
+
+必须把indexjqcode2019000000000.htm
+
+和index2.php这两个文件复制到服务器根目录下才能正常运行
+
+
+
+必须在同级目录下才能正常运行
+
+
+网站服务器根目录下必须有一份，不能删掉，删除了下级目录下的就无法运行
+
+
+
+根目录下必须有有一份，下级目录下的才能运行。
+
+
+
+
+必须在同级目录下才能正常运行
+
+
+
+
+
